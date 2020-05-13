@@ -1,25 +1,25 @@
 function reverseInt(num){
-  // parseInt() turns a string into a number
+  // parseInt() turns a string into an integer
 
-  // // Solution #1
-  // const reversed = num.toString().split("").reverse().join("")
+  // Solution #1
+  const reversed = num.toString().split("").reverse().join("")
 
-  // return parseInt(reversed) * Math.sign(num);
-
-
-  // // Solution #1.5
-  // return parseInt(num.toString().split("").reverse().join("")) * Math.sign(num);
+  return parseInt(reversed) * Math.sign(num);
 
 
-  // // Solution #2
-  // let reversed = "";
-  // const numbers = num.toString().split("");
+  // Solution #1.2
+  return parseInt(num.toString().split("").reverse().join("")) * Math.sign(num);
 
-  // for (number of numbers){
-  //   reversed = number + reversed;
-  // }
 
-  // return num < 0 ? parseInt(reversed) * -1 : parseInt(reversed); 
+  // Solution #2
+  let reversed = "";
+  const numbers = num.toString().split("");
+
+  for (let number of numbers){
+    reversed = number + reversed;
+  }
+
+  return num < 0 ? parseInt(reversed) * -1 : parseInt(reversed); 
 
 
   // Solution #3
